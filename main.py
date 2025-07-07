@@ -9,3 +9,21 @@ if married == 'yes':
 elif married == 'no':
     is_married = 'not'
 print(f'my name is {my_name}, i\'m {my_age} years old, {my_height}cm tall and i\'m {is_married} married')
+
+
+# comparison operator <, >, ==, !=
+print(10 > 3)
+
+#control flow
+weather = input('enter today\'s weather(rainy, windy, sunny, snowy): ')
+weather.strip()
+if weather == 'rainy':
+    print('it\'s raining today, take an umbrella when going out!')
+elif weather == 'windy':
+    print('Take a jacket, it\'s a bit cold outside.')
+elif weather == 'sunny':
+    print('it\'s bright outside, drink a lot water to help hydrate properly')
+elif weather == 'snowy':
+    print('it\'s freezing today, keep yourself warm')
+else:
+    print('weather command not understood!')
