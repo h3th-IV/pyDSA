@@ -19,3 +19,23 @@ def two_sum(numbers, target):
 
 numbers = [ 9, 2, 5, 7, 3]
 print(two_sum(numbers, target=9))
+
+
+def best_profit_days(stock_prices):
+    min_price = stock_prices[0]
+    max_profit = 0
+
+    buy_price = stock_prices[0]
+    sell_price = stock_prices[0]
+    # start at the second price
+    for price in stock_prices[1:] :
+        if price < min_price:
+            min_price = price
+            buy_price = price
+        elif price - min_price > max_profit:
+            sell_price = price
+            max_profit = sell_price - buy_price
+    return ([buy_price, sell_price], max_profit)
+
+stock_prices = [9, 2, 5, 7, 3]
+print(best_profit_days(stock_prices))
