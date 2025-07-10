@@ -1,4 +1,5 @@
-# module learning; make code more organized
+import random
+# module learning; make code more organized; this here file will be called utils module
 
 def max_stock_profit(stock_prices):
     if len(stock_prices) < 2:
@@ -19,3 +20,7 @@ def max_stock_profit(stock_prices):
             sell_price = price
     
     return ([buy_price, sell_price], max_profit_price)
+
+
+def generate_random_values():
+    return random.randint(1, 10)
