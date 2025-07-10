@@ -39,3 +39,39 @@ def best_profit_days(stock_prices):
 
 stock_prices = [9, 2, 5, 7, 3]
 print(best_profit_days(stock_prices))
+
+name = "Thread Miller"
+print(sorted(name.replace(" ", ""), reverse=True))
+
+
+# tuples
+coordinates = (75, 45)
+print(coordinates.count(75))
+
+# dictionaries
+customer = {
+    'name': 'Thread Miller',
+    'age': 30,
+    'is_verified': True
+}
+
+print(customer['name'])
+# or use the get keyword
+print(customer.get('name'))
+
+# incase key do not exist, we can set a default value
+print(customer.get('is_married', False))
+
+nums = {
+    '1' : 'One',
+    '2' : 'Two',
+    '3' : 'three',
+    '4' : 'four'
+}
+
+output = ''
+phone = input('enter number 1-4> ')
+for i in phone:
+    output += nums.get(i, "Null") + " "
+print(output)
+
