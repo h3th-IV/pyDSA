@@ -19,5 +19,3 @@ def max_stock_profit(stock_prices):
             sell_price = price
     
     return ([buy_price, sell_price], max_profit_price)
-
-
