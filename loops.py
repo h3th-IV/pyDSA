@@ -42,3 +42,7 @@ for num in range(0, 10):
         count +=1
         print(num)
 print(f'we have {count} even numbers')
+
+
+for i in range(5, -1, -1):
+    print(i)

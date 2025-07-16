@@ -35,3 +35,45 @@ def two_sum_eff(arr, target):
 
 arr = [2, 0, 5, 1, 7, 3, 8, 6, 4]
 print(two_sum_eff(arr, 9))
+
+
+
+class Stack:
+
+    def __init__(self):
+        self.stack = []
+
+    def is_empty(self):
+        if len(self.stack) == 0:
+            return True
+        else:
+            return False
+
+    def push(self, val):
+        self.stack.append(val)
+
+    def pop(self):
+        if self.is_empty():
+            return 'stack is empty'
+        else:
+            self.stack.pop()
+
+    def print(self):
+        for ele in reversed(self.stack):
+            print(f'|{ele}|')
+            print('___')
+
+
+
+my_stack = Stack()
+
+print(my_stack.pop())
+my_stack.push(1)
+my_stack.push(2)
+my_stack.push(3)
+my_stack.push(4)
+my_stack.push(5)
+my_stack.print()
+my_stack.pop()
+print('stack after pop\n\n')
+my_stack.print()
