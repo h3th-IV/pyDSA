@@ -14,4 +14,24 @@ def max_stock_profit(stock_prices):
 
     return([buy_price, sell_price], max_profit)
 
-    
+
+def two_sum(arr, target):
+    n = len(arr)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] + arr[j] == target:
+                return [i, j]
+    return None
+
+
+def two_sum_eff(arr, target):
+    mp = {}
+    for ind, val in enumerate(arr):
+        diff = target - val
+        if diff in mp:
+            return [mp[diff], ind]
+        mp[val] = ind
+    return [0, 0]
+
+arr = [2, 0, 5, 1, 7, 3, 8, 6, 4]
+print(two_sum_eff(arr, 9))
